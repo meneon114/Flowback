@@ -3,6 +3,7 @@ import { GeminiAdapter } from '../adapters/gemini';
 import { ClaudeAdapter } from '../adapters/claude';
 import { PerplexityAdapter } from '../adapters/perplexity';
 import { GrokAdapter } from '../adapters/grok';
+import { ChatGPTAdapter } from '../adapters/chatgpt';
 import { PLATFORMS } from '../shared/constants';
 
 const ADAPTERS: AIAdapter[] = [
@@ -10,6 +11,7 @@ const ADAPTERS: AIAdapter[] = [
   ClaudeAdapter,
   PerplexityAdapter,
   GrokAdapter,
+  ChatGPTAdapter,
 ];
 
 // Fallback generic adapter
