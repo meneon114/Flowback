@@ -87,7 +87,6 @@ chrome.runtime.onMessage.addListener((message: ExtensionMessage, sender, sendRes
           } else {
             // Already viewing tab, transition directly to USER_RETURNED
             await updateTaskState(task.id, 'USER_RETURNED');
-            showNotification(task, false); // Play sound only
           }
           
           await updateBadge();
@@ -358,7 +357,6 @@ async function handleRequestEnd(requestId: string) {
     } else {
       // User is looking at the tab, mark resolved directly
       await updateTaskState(task.id, 'USER_RETURNED');
-      showNotification(task, false); // Play sound only
     }
 
     await updateBadge();

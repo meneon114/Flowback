@@ -25,17 +25,19 @@ export function showNotification(task: Task, needsOverlay: boolean): void {
           activeTab.url.startsWith('about:');
           
         if (!isRestricted) {
-          // 1. Play chime with settings on the active tab
-          chrome.scripting.executeScript({
-            target: { tabId: activeTab.id },
-            func: playChimeWithSettings,
-            args: [sound, volume]
-          }, () => {
-            const err = chrome.runtime.lastError;
-            if (err) {
-              console.warn('[Flowback SW] Sound playback injection failed:', err.message);
-            }
-          });
+          // 1. Play chime with settings on the active tab if popup overlay is needed
+          if (needsOverlay) {
+            chrome.scripting.executeScript({
+              target: { tabId: activeTab.id },
+              func: playChimeWithSettings,
+              args: [sound, volume]
+            }, () => {
+              const err = chrome.runtime.lastError;
+              if (err) {
+                console.warn('[Flowback SW] Sound playback injection failed:', err.message);
+              }
+            });
+          }
 
           // 2. Inject/show overlay on active tab if required
           if (needsOverlay) {
