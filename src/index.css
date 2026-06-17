@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, .retro-font {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Retro minimal card layout - restored to vibrant purple/violet colors */
+.retro-card {
+  background: #0f0b21; /* Deep violet-black */
+  border: 1.5px solid #4c1d95; /* Deep purple border */
+  border-radius: 0px; /* Strictly square corners */
+  box-shadow: 3px 3px 0px 0px rgba(139, 92, 246, 0.35); /* Flat violet shadow */
+  transition: all 0.2s ease;
+}
+
+.retro-card-ready {
+  background: #0f0b21;
+  border: 1.5px solid #10b981; /* Retro emerald green */
+  border-radius: 0px;
+  box-shadow: 3px 3px 0px 0px rgba(16, 185, 129, 0.35);
+  transition: all 0.2s ease;
+}
+
+/* Retro minimal button styles - restored to purple/violet branding */
+.retro-btn {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  border-radius: 0px; /* Square */
+  border: 1.5px solid #6d28d9;
+  background: #1e1b4b; /* Dark indigo */
+  color: #c084fc;
+  box-shadow: 2px 2px 0px 0px #090616;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.retro-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px 0px #090616;
+  border-color: #a855f7;
+  color: #e9d5ff;
+}
+
+.retro-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px #090616;
+}
+
+.retro-btn-primary {
+  background: #8b5cf6; /* Main brand violet */
+  border-color: #c084fc;
+  color: #ffffff;
+  box-shadow: 2px 2px 0px 0px #090616;
+}
+
+.retro-btn-primary:hover {
+  background: #7c3aed;
+  border-color: #a855f7;
+  color: #ffffff;
+}
+
+/* Custom retro scrollbar matching the purple palette */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0b21;
+  border-left: 1.5px solid #4c1d95;
+}
+::-webkit-scrollbar-thumb {
+  background: #6d28d9;
+  border: 2px solid #0f0b21;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
