@@ -1,5 +1,4 @@
 import { AIAdapter } from '../shared/types';
-import { ChatGPTAdapter } from '../adapters/chatgpt';
 import { GeminiAdapter } from '../adapters/gemini';
 import { ClaudeAdapter } from '../adapters/claude';
 import { PerplexityAdapter } from '../adapters/perplexity';
@@ -7,7 +6,6 @@ import { GrokAdapter } from '../adapters/grok';
 import { PLATFORMS } from '../shared/constants';
 
 const ADAPTERS: AIAdapter[] = [
-  ChatGPTAdapter,
   GeminiAdapter,
   ClaudeAdapter,
   PerplexityAdapter,
