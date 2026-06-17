@@ -1,6 +1,6 @@
 # Flowback
 
-Flowback is a premium, lightweight browser extension that automatically tracks and alerts you when your background AI streams (ChatGPT, Claude, Gemini, Perplexity, and Grok) complete, allowing you to seamlessly return to your completed tasks.
+Flowback is a lightweigt browser extension that automatically tracks and alerts you when your background AI streams (ChatGPT, Claude, Gemini, Perplexity, and Grok) complete, allowing you to seamlessly return to your completed tasks.
 
 ## Features
 
